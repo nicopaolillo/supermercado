@@ -15,6 +15,10 @@ public class Cliente {
 		this.direccion = direccion;
 	}
 
+	public Cliente() {
+		super();
+	}
+
 	public int getIdCliente() {
 		return IdCliente;
 	}

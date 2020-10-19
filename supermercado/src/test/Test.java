@@ -53,7 +53,15 @@ public class Test {
 		System.out.println("\n");
 		System.out.println("MUESTRO LA LISTA DE CLIENTES AGREGADOS A LA LISTA");
 		System.out.println(admCliente.toString());
-		
+//		traigo un cliente
+		System.out.println("\n");
+		System.out.println("MUESTRO UN CLIENTE");
+		System.out.println(admCliente.traerCliente(0));
+//		pruebo eliminar un cliente
+		System.out.println("\n");
+		System.out.println("ELIMINO UN CLIENTE Y VUELVO A MOSTRAR LA LISTA");
+		admCliente.eliminarCliente(1);
+		System.out.println(admCliente.toString());
 	}
 
 }

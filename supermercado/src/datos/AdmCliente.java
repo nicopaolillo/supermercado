@@ -25,4 +25,24 @@ public class AdmCliente {
 
 		return bandera;
 	}
+	public Cliente traerCliente(int idCliente) {
+		Cliente cliente = new Cliente();
+		for (Cliente clie : listCliente) {
+			if(clie.getIdCliente()==idCliente) {
+				cliente = clie;
+			}
+		}
+		return cliente;
+	}
+	public boolean eliminarCliente(int idCliente)throws Exception {
+		boolean answer = false;
+		for (Cliente clie : listCliente) {
+			if(clie.getIdCliente()==idCliente) {
+				listCliente.remove(clie);
+				answer = true;
+			}
+		}
+		if(answer==false)throw new Exception("Error, cliente no encontrado");
+		return answer;
+	}
 }
